@@ -42,3 +42,30 @@ let pairsWithinEpsilon = findWithEpsilon(setA, setB, epsilon);
 console.log("Pair of points with epsilon:");
 
 pairsWithinEpsilon.forEach(pair => console.log(pair));
+
+
+
+
+
+
+// solution of question no-2  in javascript ___________________________________
+
+
+
+function gcd(m, n) {
+    while (n !== 0) {
+        var temp = n;
+        n = m % n;
+        m = temp;
+    }
+    return m;
+}
+
+function lcm(m, n) {
+    return (m * n) / gcd(m, n);
+}
+
+var m = 12;
+var n = 18;
+console.log("GCD:", gcd(m, n));
+console.log("LCM:", lcm(m, n));
