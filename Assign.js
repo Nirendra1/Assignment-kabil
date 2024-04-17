@@ -52,20 +52,20 @@ pairsWithinEpsilon.forEach(pair => console.log(pair));
 
 
 
-function gcd(m, n) {
-    while (n !== 0) {
-        var temp = n;
-        n = m % n;
-        m = temp;
+function gcd(a, b) {
+    while (b !== 0) {
+        var temp = b;
+        b = a % b;
+        a = temp;
     }
-    return m;
+    return a;
 }
 
-function lcm(m, n) {
-    return (m * n) / gcd(m, n);
+function lcm(a, b) {
+    return (a * b) / gcd(a, b);
 }
 
-var m = 12;
-var n = 18;
-console.log("GCD:", gcd(m, n));
-console.log("LCM:", lcm(m, n));
+var a = 12;
+var b = 18;
+console.log("GCD:", gcd(a, b));
+console.log("LCM:", lcm(a, b));
